@@ -83,6 +83,18 @@ public class Main {
         /* 챕터3_실전문제_
 
         */
-
+        int n,m;
+        int result;
+        while(true) {
+            try {
+                System.out.print("곱하고자 하는 정수 2개 입력>>");
+                n = scanner.nextInt();
+                m = scanner.nextInt();
+                result = n * m;
+            } catch (InputMismatchException e) {
+                System.out.print("정수를 입력하세요!");
+            }
+            System.out.println(n + "x" + "=" + n * m);
+        }
     }
 }
