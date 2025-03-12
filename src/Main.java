@@ -83,6 +83,8 @@ public class Main {
         /* 챕터3_실전문제_
 
         */
+
+        /*
         int n,m;
         int result;
         while(true) {
@@ -96,5 +98,7 @@ public class Main {
             }
             System.out.println(n + "x" + "=" + n * m);
         }
+
+         */
     }
 }
