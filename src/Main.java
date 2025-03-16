@@ -85,5 +85,59 @@ public class Main {
         */
 
 
+
+        /* 쳅터4_오픈첼린지
+
+
+
+        class Player{
+
+            String name;
+            String word;
+
+        }
+        int player_num;
+        String word = "아버지";
+        int lastIndex = word.length()-1;
+        char lastChar = word.charAt(lastIndex);
+        char firstChar = word.charAt(0);
+        int iter = 0;
+
+        System.out.println("끝말잇기 게임을 시작합니다...");
+        System.out.print("게임에 참가하는 인원은 몇명입니까?>>");
+        player_num = scanner.nextInt();
+        Player[] players = new Player[player_num]; // 입력받은 플레이어 수에 맞춰 Player 클래스 객체 생성
+
+        for(int i=0;i<player_num;i++){
+            players[i] = new Player();
+            System.out.print("참가자의 이름을 입력하세요>>");
+            players[i].name = scanner.next();
+        }
+
+        System.out.println("시작하는 단어는 아버지입니다.");
+        while(true){
+
+            // 최대 인원 충족시 iter 변수를 초기화
+            if(iter==player_num){
+                iter = 0;
+            }
+            System.out.print(players[iter].name+">>");
+            players[iter].word = scanner.next();
+            int lastIndex_players = players[iter].word.length() - 1;
+            char firstChar_players = players[iter].word.charAt(0);
+            char lastChar_players = players[iter].word.charAt(lastIndex_players);
+            if(lastChar==firstChar_players){
+                iter++;
+                lastChar = lastChar_players;
+                continue;
+            }
+            else{
+                System.out.println(players[iter].name+"이 졌습니다.");
+                break;
+            }
+
+        }
+
+         */
     }
 }
