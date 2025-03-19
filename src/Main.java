@@ -139,5 +139,12 @@ public class Main {
         }
 
          */
+
+        /* 4장_실전문제_9번
+
+         */
+
+        Random random = new Random();
+        int rand_num
     }
 }
