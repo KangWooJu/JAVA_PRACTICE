@@ -144,7 +144,5 @@ public class Main {
 
          */
 
-        Random random = new Random();
-        int rand_num
     }
 }
