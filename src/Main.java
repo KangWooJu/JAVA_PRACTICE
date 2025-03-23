@@ -142,7 +142,90 @@ public class Main {
 
         /* 4장_실전문제_9번
 
+
+
+         Random random = new Random();
+
+
+         class Player{
+             String name;
+             int score_accum;
+             int input;
+
+             public Player(String name){
+                 this.name = name;
+                 this.score_accum = 0;
+             }
+
+         }
+
+         System.out.println("*** 예측 게임을 시작합니다.");
+         System.out.print("게임에 참여할 선수 수>>");
+         int num_player = scanner.nextInt();
+         Player[] player = new Player[num_player];
+
+         for(int i=0;i<num_player;i++){
+             System.out.print("선수 이름>>");
+             String user_name = scanner.next();
+             player[i] = new Player(user_name);
+         }
+
+         while(true) {
+             System.out.println("1~100사이의 숫자가 결정되었습니다. 선수들은 맞추어 보세요.");
+             int num = random.nextInt(100)+1;
+             int best = 100;
+             int best_scorer = 0;
+             int best_one = 0;
+             String good = "start";
+             for(int s=0;s<player.length;s++){
+                 System.out.print(player[s].name+">>");
+                 int scan = scanner.nextInt();
+                 player[s].input = scan;
+             }
+
+             for(int k=0;k<player.length;k++){
+                 if(num>=player[k].input){
+                     player[k].input = num - player[k].input;
+                 }
+                 else {
+                     player[k].input = player[k].input - num;
+                 }
+             }
+
+             for(int m = 0;m<player.length;m++){
+                 if(best>player[m].input){
+                     best = player[m].input;
+                     good = player[m].name;
+                     best_one = m;
+                 }
+             }
+
+             player[best_one].score_accum++;
+             System.out.println("정답은 "+num+". "+player[best_one].name+"이 이겼습니다. 승점 1점 확보!");
+             System.out.print("계속하시려면 yes 입력>>");
+             String yesOrNo = scanner.next();
+             if(yesOrNo.equals("yes")){
+                 continue;
+             }
+             else if(yesOrNo.equals("no")){
+                 for(int q=0;q<player.length;q++){
+                     System.out.print(player[q].name+":"+player[q].score_accum+" ");
+                 }
+                 for(int a=0;a<player.length;a++){
+                     if(best_scorer<player[a].score_accum){
+                         best_scorer = player[a].score_accum;
+                     }
+                 }
+                 System.out.println(player[best_scorer].name+"가 최종 승리하였습니다.");
+                 break;
+             }
+
+         }
+
+
+
          */
+
 
     }
 }
