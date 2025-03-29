@@ -233,6 +233,15 @@ public class Main {
 
         System.out.println("문자열을 입력하세요. 빈 칸이 있어도 되고 영어 한글 모두 됩니다.");
         String input = scanner.nextLine();
+        String test = "this is test";
+        char[] test2 = test.toCharArray();
+
+        for(int a = 0 ;a<test.length();a++){
+            for(int b=0;b<test;b++){
+                System.out.print
+            }
+        }
+
 
 
 
