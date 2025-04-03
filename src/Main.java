@@ -257,5 +257,67 @@ public class Main {
 
          */
 
+        /* 4장_Velog 정리용 코드
+
+        class staticMethod {
+
+            static int m;
+            int n;
+            void f1( int x ){ // 정상
+                n = x;
+            }
+            void f2( int x ){ // 정상
+                m = x;
+            }
+
+            static void s1(int x){
+                n = x; // 컴파일 오류 : static 메소드에 일반 맴버 변수 사용 불가
+            }
+
+            static void s2(int x){
+                m = x; // 정상 : static 메소드는 static 필드 사용 가능
+            }
+        }
+
+
+
+        final class FinalClass { // 해당 클래스는 상속 불가
+
+        }
+
+        class SubClass extends FinalClass{ // 컴파일 오류 발생
+
+        }
+
+
+
+        public class SuperClass {
+            protected final int finalMethod(){
+                System.out.println("final Method");
+            }
+        }
+
+        class SubClass extends SuperClass{
+            @Override // 컴파일 오류
+            protected int finalMehtod(){
+
+            }
+        }
+
+
+
+
+        public class FinalClass {
+            final int ROWS = 10;
+            void f(){
+                int[] intArray = new int[ROWS];
+                ROWS = 30; // 컴파일 오류
+            }
+
+        }
+
+
+         */
+
     }
 }
