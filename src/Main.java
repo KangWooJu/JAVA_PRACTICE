@@ -317,7 +317,72 @@ public class Main {
         }
 
 
-         */
+         //7장_예시코드
 
+
+
+         // Vector 사용 예제
+         Vector<String> name = new Vector<String>();
+
+
+         for(int i=0;i<4;i++){
+             System.out.print("이름입력>>");
+             String s = scanner.nextLine();
+             name.add(s);
+         }
+
+         for(int s=0;s<4;s++){
+             System.out.print(name.get(s)+" ");
+         }
+
+
+
+         // Iterator로 컬렉션 객체 활용예시
+         Vector<Integer> v = new Vector<Integer>();
+         v.add(1);
+         v.add(2);
+
+         Iterator<Integer> it = v.iterator();
+         while(it.hasNext()){
+             int n = it.next();
+             System.out.println(n);
+         }
+
+
+
+        // HashMap 예제
+        HashMap<Integer,String> hash = new HashMap<Integer,String>();
+        hash.put(1,"start");
+        String getThing = hash.get(1);
+
+        Set<Integer> keys = hash.keySet();
+        Iterator<Integer> iter = keys.iterator();
+
+        while(iter.hasNext()){
+            Integer key = iter.next();
+            String content = hash.get(key);
+            System.out.println("key : "+key+" , "+"value : "+content);
+        }
+
+
+
+
+        // Collection의 sort 메소드
+        Vector<Integer> vec = new Vector<Integer>();
+
+        vec.add(3);
+        vec.add(2);
+        vec.add(1);
+        vec.add(4);
+
+        Collections.sort(vec);
+
+        Iterator<Integer> iter = vec.iterator();
+        while(iter.hasNext()){
+            System.out.println(iter.next());
+        }
+
+
+         */
     }
 }
